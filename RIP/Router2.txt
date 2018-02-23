@@ -1,0 +1,99 @@
+--- System Configuration Dialog ---
+
+Would you like to enter the initial configuration dialog? [yes/no]: n
+
+
+Press RETURN to get started!
+
+
+
+Router>enable
+Router#
+Router#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#interface FastEthernet0/0
+Router(config-if)#
+Router(config-if)#exit
+Router(config)#interface FastEthernet0/1
+Router(config-if)#
+Router(config-if)#exit
+Router(config)#interface FastEthernet1/0
+Router(config-if)#
+Router(config-if)#exit
+Router(config)#interface FastEthernet0/0
+Router(config-if)#
+Router(config-if)#exit
+Router(config)#interface FastEthernet0/0
+Router(config-if)#ip address 192.168.10.2 255.255.255.0
+Router(config-if)#ip address 192.168.10.2 255.255.255.252
+Router(config-if)#ip address 192.168.10.2 255.255.255.252
+Router(config-if)#
+Router(config-if)#exit
+Router(config)#interface FastEthernet0/1
+Router(config-if)#ip address 192.168.10.6 255.255.255.252
+Router(config-if)#ip address 192.168.10.6 255.255.255.252
+Router(config-if)#
+Router(config-if)#exit
+Router(config)#interface FastEthernet1/0
+Router(config-if)#ip address 192.168.2.1 255.255.255.0
+Router(config-if)#ip address 192.168.2.1 255.255.255.0
+Router(config-if)#
+
+Router>enable
+Router#
+Router#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#interface FastEthernet0/0
+Router(config-if)#no shutdown
+Router(config-if)#
+%LINK-5-CHANGED: Interface FastEthernet0/0, changed state to up
+
+Router(config-if)#exit
+Router(config)#interface FastEthernet0/1
+Router(config-if)#no shutdown
+Router(config-if)#
+%LINK-5-CHANGED: Interface FastEthernet0/1, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/1, changed state to up
+
+Router(config-if)#exit
+Router(config)#interface FastEthernet1/0
+Router(config-if)#no shutdown
+Router(config-if)#
+%LINK-5-CHANGED: Interface FastEthernet1/0, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet1/0, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/0, changed state to up
+
+Router(config-if)#exit
+Router(config)#router rip
+Router(config-router)#network 192.168.10.0
+Router(config-router)#network 192.168.2.0
+Router(config-router)#
+Router(config-router)#
+Router(config-router)#
+
+Router>enable
+Router#con
+Router#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#rout
+Router(config)#router 
+Router(config)#router r
+Router(config)#router rip 
+Router(config-router)#version 2
+Router(config-router)#destr st
+Router(config-router)#destr sta
+Router(config-router)#dest
+Router(config-router)#di
+Router(config-router)#red
+Router(config-router)#redistribute stat
+Router(config-router)#redistribute static 
+Router(config-router)#def
+Router(config-router)#default-information ?
+  originate  Distribute a default route
+Router(config-router)#default-information or
+Router(config-router)#default-information originate 
+Router(config-router)#exit
+Router(config)#

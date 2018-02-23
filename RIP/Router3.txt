@@ -1,0 +1,145 @@
+﻿!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+На этом роутере я много эксперементировал с CLI, поэтому у меня не осталось начальных логов. В следующий раз буду заранее сохранять. Извините. Но в целом, я его всегда настраивал последним, так что все действия идентичны с Router1-2
+
+
+
+
+
+Router(config-router)#network 192.168.10.0
+Router(config-router)#network 192.168.3.0
+Router(config-router)#
+
+Router>enable
+Router#
+Router#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#router rip
+Router(config-router)#
+Router(config-router)#
+Router(config-router)#
+Router(config-router)#exit
+Router(config)#ri
+Router(config)#rou
+Router(config)#router r
+Router(config)#router rip 
+Router(config-router)#version ?
+  <1-2>  version
+Router(config-router)#version 2
+Router(config-router)#re
+Router(config-router)#redistribute ?
+  connected  Connected
+  eigrp      Enhanced Interior Gateway Routing Protocol (EIGRP)
+  metric     Metric for redistributed routes
+  ospf       Open Shortest Path First (OSPF)
+  rip        Routing Information Protocol (RIP)
+  static     Static routes
+Router(config-router)#redistribute static
+Router(config-router)#de
+Router(config-router)#default-information ?
+  originate  Distribute a default route
+Router(config-router)#default-information ori
+Router(config-router)#default-information originate 
+Router(config-router)#exit
+Router(config)#wr mem
+               ^
+% Invalid input detected at '^' marker.
+	
+Router(config)#wr
+Router(config)#
+Router(config)#exit
+Router#
+%SYS-5-CONFIG_I: Configured from console by console
+s
+% Ambiguous command: "s"
+Router#sho
+Router#show 
+Router#show ?
+  aaa                Show AAA values
+  access-lists       List access lists
+  arp                Arp table
+  cdp                CDP information
+  class-map          Show QoS Class Map
+  clock              Display the system clock
+  controllers        Interface controllers status
+  crypto             Encryption module
+  debugging          State of each debugging option
+  dhcp               Dynamic Host Configuration Protocol status
+  dot11              IEEE 802.11 show information
+  ephone             Show all or one ephone status
+  file               Show filesystem information
+  flash:             display information about flash: file system
+  flow               Flow information
+  frame-relay        Frame-Relay information
+  history            Display the session command history
+  hosts              IP domain-name, lookup style, nameservers, and host table
+  interfaces         Interface status and configuration
+  ip                 IP information
+  ipv6               IPv6 information
+  line               TTY line information
+
+Router#show ip 
+Router#show ip r
+Router#show ip rou
+Router#show ip route 
+Codes: C - connected, S - static, I - IGRP, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2, E - EGP
+       i - IS-IS, L1 - IS-IS level-1, L2 - IS-IS level-2, ia - IS-IS inter area
+       * - candidate default, U - per-user static route, o - ODR
+       P - periodic downloaded static route
+
+Gateway of last resort is not set
+
+     10.0.0.0/24 is subnetted, 1 subnets
+C       10.6.1.0 is directly connected, FastEthernet0/0
+R    192.168.1.0/24 [120/1] via 10.6.1.1, 00:00:07, FastEthernet0/0
+R    192.168.2.0/24 [120/1] via 192.168.10.6, 00:00:03, FastEthernet0/1
+C    192.168.3.0/24 is directly connected, FastEthernet1/0
+     192.168.10.0/24 is variably subnetted, 3 subnets, 2 masks
+R       192.168.10.0/24 [120/1] via 10.6.1.1, 00:00:07, FastEthernet0/0
+R       192.168.10.0/30 [120/1] via 192.168.10.6, 00:00:03, FastEthernet0/1
+C       192.168.10.4/30 is directly connected, FastEthernet0/1
+
+Router#show ?
+  aaa                Show AAA values
+  access-lists       List access lists
+  arp                Arp table
+  cdp                CDP information
+  class-map          Show QoS Class Map
+  clock              Display the system clock
+  controllers        Interface controllers status
+  crypto             Encryption module
+  debugging          State of each debugging option
+  dhcp               Dynamic Host Configuration Protocol status
+  dot11              IEEE 802.11 show information
+  ephone             Show all or one ephone status
+  file               Show filesystem information
+  flash:             display information about flash: file system
+  flow               Flow information
+  frame-relay        Frame-Relay information
+  history            Display the session command history
+  hosts              IP domain-name, lookup style, nameservers, and host table
+  interfaces         Interface status and configuration
+  ip                 IP information
+  ipv6               IPv6 information
+  line               TTY line information
+
+Router#show in
+Router#show interfaces ?
+  Dot11Radio        Dot11 interface
+  Ethernet          IEEE 802.3
+  FastEthernet      FastEthernet IEEE 802.3
+  GigabitEthernet   GigabitEthernet IEEE 802.3z
+  Loopback          Loopback interface
+  Port-channel      Ethernet Channel of interfaces
+  Serial            Serial
+  Tunnel            Tunnel interface
+  Virtual-Access    Virtual Access interface
+  Virtual-Template  Virtual Template interface
+  Vlan              Catalyst Vlans
+  switchport        Show interface switchport information
+  trunk             Show interface trunk information
+  |                 Output Modifiers
+  <cr>
+Router#
