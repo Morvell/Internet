@@ -1,6 +1,5 @@
 import fr.devnied.bitlib.BitUtils;
 import java.net.DatagramPacket;
-
 import lombok.Getter;
 import lombok.Setter;
 import org.apache.commons.net.ntp.TimeStamp;
@@ -44,9 +43,9 @@ public class SntpV3 {
     bit.setNextInteger(rootDelay, 32);
     bit.setNextInteger(rootDispersion, 32);
     bit.setNextInteger(referenceId, 32);
-    bit.setCurrentBitIndex(24*8);
+    bit.setCurrentBitIndex(24 * 8);
     bit.setNextLong(originateTimestamp, 64);
-    bit.setCurrentBitIndex(32*8);
+    bit.setCurrentBitIndex(32 * 8);
     bit.setNextLong(receiveTimestamp, 64);
     bit.setNextLong(transmitTimestamp, 64);
     return new DatagramPacket(bit.getData(), 48);
@@ -58,7 +57,7 @@ public class SntpV3 {
 
   public long getOriginateTimeFromRequest(byte[] bytes) {
     BitUtils bit = new BitUtils(bytes);
-    bit.setCurrentBitIndex(40*8);
+    bit.setCurrentBitIndex(40 * 8);
     return bit.getNextLong(64);
   }
 

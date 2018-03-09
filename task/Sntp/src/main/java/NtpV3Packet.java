@@ -21,5 +21,4 @@ public interface NtpV3Packet {
   int VERSION_3 = 3;
   int VERSION_4 = 4;
 
-
 }
