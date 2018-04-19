@@ -5,6 +5,7 @@ from urllib.request import urlopen
 
 
 def trace(destination_ip, hops, timeout):
+    print(dest_ip)
     ttl = 1
     ip = None
 
@@ -36,6 +37,9 @@ def start_trace(dest_ip, ttl, timeout):
         return addr
     except socket.timeout:
         return 'timeout'
+    except:
+        print("Интеернет тютю")
+        exit()
     finally:
         sock.close()
 
@@ -73,6 +77,7 @@ if __name__ == '__main__':
     ttl = config.getint("TTL", "TTL")
     timeout = config.getint("Timeout", "Timeout")
 
-    print(dest_ip)
-
-    trace(socket.gethostbyname(dest_ip), ttl, timeout)
+    try:
+        trace(socket.gethostbyname(dest_ip), ttl, timeout)
+    except:
+        print("Инетренет ")
