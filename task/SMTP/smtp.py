@@ -81,11 +81,14 @@ class SMTP:
 
     def get_only_text(self):
         f = open('1.txt', encoding="utf-8")
-        text = ""
+        text = "\r\n"
         try:
             line = f.readline()
             while line:
-                text += line
+                if re.match('^\.+.*', line):
+                    text += '.' + line
+                else:
+                    text += line
                 line = f.readline()
             f.close()
         except Exception as e:
@@ -156,11 +159,10 @@ class SMTP:
 
 def main():
     try:
-
         server = "smtp.yandex.ru"
         port = 465
         rcpt = "test270296@yandex.ru"
-        subject = "Тест сообщение"
+        subject = "SMTP (англ. Simple Mail Transfer Protocol — простой протокол передачи почты) — это широко используемый сетевой протокол, предназначенный для передачи электронной почты в сетях TCP/IP.  TP впервые был описан в RFC 821 (1982 год); последнее обновление в RFC 5321 (2008) включает масштабируемое расширение — ESMTP (англ.  Extended SMTP). В настоящее время под «протоколом SMTP», как правило, подразумевают и его расширения. Протокол SMTP предназначен для передачи исходящей почты с использованием порта TCP 25."
         path = "file"
         login = "test270296@yandex.ru"
         password = "27021996"
