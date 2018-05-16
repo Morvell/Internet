@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/HTTPAPI.iml" filepath="$PROJECT_DIR$/HTTPAPI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/HTTP-API.iml" filepath="$PROJECT_DIR$/.idea/HTTP-API.iml" />
     </modules>
   </component>
 </project>
