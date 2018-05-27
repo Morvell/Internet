@@ -43,7 +43,7 @@ def get_friends_sorted_by_popularity(user_id, access_token):
 def main():
     try:
         user_id = input("Введите id или имя пользователя: ")
-        access_token = "???"
+        access_token = "e886e972e886e972e886e97218e8e4ef4eee886e886e972b27d5f2420099a0bae2a5d4b"
         friend_number = 1
         if not user_id.isnumeric():
             user_id = get_user_id(user_id, access_token)
